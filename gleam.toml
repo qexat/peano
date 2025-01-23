@@ -1,0 +1,14 @@
+name = "peano"
+version = "0.1.0"
+
+description = "Natural numbers (integers greater or equal to 0) based on Peano axioms."
+licences = ["MIT"]
+repository = { type = "github", user = "qexat", repo = "peano" }
+
+gleam = ">= 1.7.0"
+
+[dependencies]
+gleam_stdlib = ">= 0.44.0 and < 2.0.0"
+
+[dev-dependencies]
+gleeunit = ">= 1.0.0 and < 2.0.0"
