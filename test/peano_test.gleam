@@ -121,6 +121,22 @@ pub fn add_test() {
   ))
 }
 
+pub fn is_even_test() {
+  peano.is_even(peano.O) |> should.be_true
+
+  peano.is_even(peano.one) |> should.be_false
+
+  peano.is_even(peano.six) |> should.be_true
+}
+
+pub fn is_odd_test() {
+  peano.is_even(peano.O) |> should.be_false
+
+  peano.is_odd(peano.four) |> should.be_false
+
+  peano.is_odd(peano.nine) |> should.be_true
+}
+
 pub fn main() {
   gleeunit.main()
 }

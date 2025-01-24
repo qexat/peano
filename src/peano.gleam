@@ -398,6 +398,56 @@ pub fn add(n: Nat, to m: Nat) -> Nat {
     S(_), S(m_pred) -> add(S(n), to: m_pred)
   }
 }
+
+// ## Predicates
+
+/// `is_even(n)` returns whether `n` is even. It's 0, 2, 4, ...
+/// 
+/// ## Examples
+/// 
+/// ```gleam
+/// is_even(O)
+/// // -> True
+/// ```
+/// 
+/// ```gleam
+/// is_even(one)
+/// // -> False
+/// ```
+/// 
+/// ```gleam
+/// is_even(six)
+/// // -> True
+/// ```
+pub fn is_even(n: Nat) -> Bool {
+  case n {
+    O -> True
+    S(O) -> False
+    S(S(n_pred)) -> is_even(n_pred)
+  }
+}
+
+/// `is_odd(n)` returns whether `n` is odd. It's 1, 3, 5, ...
+/// 
+/// ## Examples
+/// 
+/// ```gleam
+/// is_odd(O)
+/// // -> False
+/// ```
+/// 
+/// ```gleam
+/// is_odd(one)
+/// // -> True
+/// ```
+/// 
+/// ```gleam
+/// is_odd(six)
+/// // -> False
+/// ```
+pub fn is_odd(n: Nat) -> Bool {
+  !is_even(n)
+}
 // TODO: subtract, multiply, divmod, divide, modulo, power
 // TODO: double, square, square_root, negate, absolute_value
 // TODO: clamp, sum, product, factorial, is_even, is_odd
