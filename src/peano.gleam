@@ -474,7 +474,35 @@ fn to_int_tailrec(n: Nat, acc: Int) -> Int {
 pub fn to_int(n: Nat) -> Int {
   to_int_tailrec(n, 0)
 }
+
+fn to_float_tailrec(n: Nat, acc: Float) -> Float {
+  case n {
+    O -> acc
+    S(n_pred) -> to_float_tailrec(n_pred, 1.0 +. acc)
+  }
+}
+
+/// `to_float(n)` converts `n` into a built-in `Float` value.
+/// 
+/// BEWARE: conversion is done by repeatingly adding 1. As such,
+/// due to the nature of floating-point numbers, the result can
+/// be imprecise.
+/// 
+/// ## Examples
+/// 
+/// ```gleam
+/// to_float(O)
+/// // -> 0.0
+/// ```
+/// 
+/// ```gleam
+/// to_float(five)
+/// // -> 5.0
+/// ```
+pub fn to_float(n: Nat) -> Float {
+  to_float_tailrec(n, 0.0)
+}
 // TODO: subtract, multiply, divmod, divide, modulo, power
 // TODO: double, square, square_root, negate, absolute_value
 // TODO: clamp, sum, product, factorial
-// TODO: to_float, to_string
+// TODO: to_string

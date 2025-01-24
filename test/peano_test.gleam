@@ -1,3 +1,4 @@
+import gleam/float
 import gleam/order
 import gleeunit
 import gleeunit/should
@@ -143,6 +144,20 @@ pub fn to_int_test() {
   peano.to_int(peano.three) |> should.equal(3)
 
   peano.to_int(peano.eight) |> should.equal(8)
+}
+
+pub fn to_float_test() {
+  peano.to_float(peano.O)
+  |> float.loosely_equals(with: 0.0, tolerating: 0.01)
+  |> should.be_true
+
+  peano.to_float(peano.five)
+  |> float.loosely_equals(with: 5.0, tolerating: 0.01)
+  |> should.be_true
+
+  peano.to_float(peano.six)
+  |> float.loosely_equals(with: 6.0, tolerating: 0.01)
+  |> should.be_true
 }
 
 pub fn main() {
