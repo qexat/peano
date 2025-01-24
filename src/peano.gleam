@@ -399,6 +399,88 @@ pub fn add(n: Nat, to m: Nat) -> Nat {
   }
 }
 
+pub fn subtract(n: Nat, to m: Nat) -> Nat {
+  todo
+}
+
+pub fn multiply(n: Nat, with m: Nat) -> Nat {
+  todo
+}
+
+pub fn divmod(dividend: Nat, divisor: Nat) -> Result(#(Nat, Nat), Nil) {
+  todo
+}
+
+pub fn divmod_total(dividend: Nat, divisor: Nat) -> #(Nat, Nat) {
+  todo
+}
+
+pub fn divide(dividend: Nat, divisor: Nat) -> Result(Nat, Nil) {
+  todo
+}
+
+pub fn divide_total(dividend: Nat, divisor: Nat) -> Nat {
+  todo
+}
+
+pub fn modulo(dividend: Nat, divisor: Nat) -> Result(Nat, Nil) {
+  todo
+}
+
+pub fn modulo_total(dividend: Nat, divisor: Nat) -> Nat {
+  todo
+}
+
+pub fn power(base: Nat, exponent: Nat) -> Nat {
+  todo
+}
+
+// ## Basic functions
+
+pub fn double(n: Nat) -> Nat {
+  todo
+}
+
+pub fn square(n: Nat) -> Nat {
+  todo
+}
+
+pub fn square_root(n: Nat) -> Nat {
+  todo
+}
+
+pub fn factorial(n: Nat) -> Nat {
+  product(make_range(start: one, stop: n, step: one))
+}
+
+// ## Iterative functions
+
+pub fn sum(numbers: List(Nat)) -> Nat {
+  todo
+}
+
+pub fn product(numbers: List(Nat)) -> Nat {
+  todo
+}
+
+// ## Ranges
+
+pub fn make_range(start n: Nat, stop m: Nat, step p: Nat) -> List(Nat) {
+  todo
+}
+
+pub fn up_to(stop n: Nat) -> List(Nat) {
+  make_range(start: O, stop: n, step: one)
+}
+
+pub fn in_range(n: Nat, min min_bound: Nat, max max_bound: Nat) -> Bool {
+  todo
+}
+
+pub fn clamp(n: Nat, min min_bound: Nat, max max_bound: Nat) -> Nat {
+  todo
+}
+
 // ## Predicates
 
 /// `is_even(n)` returns whether `n` is even. It's 0, 2, 4, ...
@@ -502,7 +584,11 @@ fn to_float_tailrec(n: Nat, acc: Float) -> Float {
 pub fn to_float(n: Nat) -> Float {
   to_float_tailrec(n, 0.0)
 }
-// TODO: subtract, multiply, divmod, divide, modulo, power
-// TODO: double, square, square_root, negate, absolute_value
-// TODO: clamp, sum, product, factorial
-// TODO: to_string
+
+pub fn to_string(n: Nat) -> String {
+  todo
+}
+
+pub fn to_numerical_representation(n: Nat) -> String {
+  todo
+}
