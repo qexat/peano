@@ -448,7 +448,33 @@ pub fn is_even(n: Nat) -> Bool {
 pub fn is_odd(n: Nat) -> Bool {
   !is_even(n)
 }
+
+// ## Type conversion to Nat, of Nat
+
+fn to_int_tailrec(n: Nat, acc: Int) -> Int {
+  case n {
+    O -> acc
+    S(n_pred) -> to_int_tailrec(n_pred, 1 + acc)
+  }
+}
+
+/// `to_int(n)` converts `n` into a built-in `Int` value.
+/// 
+/// ## Examples
+/// 
+/// ```gleam
+/// to_int(O)
+/// // -> 0
+/// ```
+/// 
+/// ```gleam
+/// to_int(three)
+/// // -> 3
+/// ```
+pub fn to_int(n: Nat) -> Int {
+  to_int_tailrec(n, 0)
+}
 // TODO: subtract, multiply, divmod, divide, modulo, power
 // TODO: double, square, square_root, negate, absolute_value
 // TODO: clamp, sum, product, factorial
-// TODO: to_int, to_float, to_string
+// TODO: to_float, to_string

@@ -137,6 +137,14 @@ pub fn is_odd_test() {
   peano.is_odd(peano.nine) |> should.be_true
 }
 
+pub fn to_int_test() {
+  peano.to_int(peano.O) |> should.equal(0)
+
+  peano.to_int(peano.three) |> should.equal(3)
+
+  peano.to_int(peano.eight) |> should.equal(8)
+}
+
 pub fn main() {
   gleeunit.main()
 }
