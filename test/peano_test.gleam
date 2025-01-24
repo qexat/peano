@@ -41,10 +41,10 @@ pub fn compare_test() {
 
 pub fn equals_test() {
   // 2 ≠ 4
-  peano.two |> peano.equals(to: peano.four) |> should.be_false
+  peano.two |> peano.equals(with: peano.four) |> should.be_false
 
   // 5 = 5
-  peano.five |> peano.equals(to: peano.five) |> should.be_true
+  peano.five |> peano.equals(with: peano.five) |> should.be_true
 }
 
 pub fn is_greater_test() {

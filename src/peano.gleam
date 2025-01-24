@@ -234,20 +234,20 @@ pub fn compare(n: Nat, with m: Nat) -> order.Order {
   }
 }
 
-/// `equals(n, to: m)` returns whether `n` is equal to `m`.
+/// `equals(n, with: m)` returns whether `n` is equal to `m`.
 /// 
 /// ## Examples
 /// 
 /// ```gleam
-/// equals(two, to: four)
+/// equals(two, with: four)
 /// // -> False
 /// ```
 /// 
 /// ```gleam
-/// equals(five, to: five)
+/// equals(five, with: five)
 /// // -> True
 /// ```
-pub fn equals(n: Nat, to m: Nat) -> Bool {
+pub fn equals(n: Nat, with m: Nat) -> Bool {
   case compare(n, with: m) {
     order.Eq -> True
     order.Gt | order.Lt -> False
