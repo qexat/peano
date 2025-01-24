@@ -1,6 +1,9 @@
 //// Natural numbers (integers greater or equal to 0) based on
 //// Peano axioms.
 //// 
+//// Every function is tail-recursive unless specified
+//// otherwise.
+//// 
 //// ## Substraction
 //// 
 //// Any substraction that would normally lead to a negative
