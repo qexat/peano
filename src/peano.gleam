@@ -450,5 +450,5 @@ pub fn is_odd(n: Nat) -> Bool {
 }
 // TODO: subtract, multiply, divmod, divide, modulo, power
 // TODO: double, square, square_root, negate, absolute_value
-// TODO: clamp, sum, product, factorial, is_even, is_odd
+// TODO: clamp, sum, product, factorial
 // TODO: to_int, to_float, to_string
