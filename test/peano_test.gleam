@@ -130,7 +130,7 @@ pub fn is_even_test() {
 }
 
 pub fn is_odd_test() {
-  peano.is_even(peano.O) |> should.be_false
+  peano.is_odd(peano.O) |> should.be_false
 
   peano.is_odd(peano.four) |> should.be_false
 
