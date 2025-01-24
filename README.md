@@ -6,6 +6,8 @@
 [![Package Version](https://img.shields.io/hexpm/v/peano)](https://hex.pm/packages/peano)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/peano/)
 
+## Quickstart
+
 ```sh
 gleam add peano@0.1.0
 ```
@@ -30,3 +32,12 @@ Further documentation can be found at <https://hexdocs.pm/peano>.
 gleam run   # Run the project
 gleam test  # Run the tests
 ```
+
+## Support
+
+If you like my work, please support me financially with GitHub Sponsors.
+
+If you enjoy the Gleam programming language, please support its developers.
+
+- Louis: <https://github.com/sponsors/lpil>
+- Giacomo: <https://github.com/sponsors/giacomocavalieri>
